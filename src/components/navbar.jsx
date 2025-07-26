@@ -1,6 +1,9 @@
+import { useGlobalContext } from "../context/globalContext";
 import { Link, NavLink, useNavigate } from "react-router";
 
 const Navbar = () => {
+  console.log(useGlobalContext());
+
   const navigate = useNavigate();
   return (
     <header className="py-4">

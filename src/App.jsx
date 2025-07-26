@@ -10,12 +10,13 @@ import CreateBlog from "./pages/createBlog";
 import Test from "./test";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
+import GlobalContextProvider from "./context/globalContext";
 
 const App = () => {
   // return <Test />;
 
   return (
-    <>
+    <GlobalContextProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -27,7 +28,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
       </Routes>
-    </>
+    </GlobalContextProvider>
   );
 };
 
